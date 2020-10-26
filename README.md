@@ -12,6 +12,11 @@ This project is an assignment created for displaying the continents and their de
 - In the project root, do `npm build`, to generate the build
 - Deploy artifacts to any server
 
+## PWA
+
+- Supports 13/14
+- Installable
+
 ## Live Deployment
 
 [Go To Website](https://olxpeople.thenoobsbook.dev)
