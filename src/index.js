@@ -4,14 +4,43 @@ import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 require('../node_modules/jquery/dist/jquery');
 require('../node_modules/bootstrap/dist/js/bootstrap');
 require('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
+const client = new ApolloClient({
+  uri: 'https://countries.trevorblades.com',
+  cache: new InMemoryCache()
+});
+
+// client.query({
+//   query: gql`
+//   {
+//     continent(code: "AF") {
+//       name,
+//       countries {
+//         capital
+//         name
+//         languages{name}
+//         states {
+//           name
+//         }
+//       }
+//     }
+//   }
+//   `
+// }).then(res => {
+//   console.log(res);
+// });
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider  client={client}>
+      <App />
+    </ApolloProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -12,7 +12,7 @@ const FooterStyles = makeStyles({
         backgroundColor: '#000',
         color:  '#fff',
         marginLeft: '0px!important',
-        marginRight: '0px!important',
+        marginRight: '0px',
         position: 'fixed',
         bottom: 0,
         width: '100%',
