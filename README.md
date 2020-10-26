@@ -12,6 +12,10 @@ This project is an assignment created for displaying the continents and their de
 - In the project root, do `npm build`, to generate the build
 - Deploy artifacts to any server
 
+## Live Deployment
+
+[Go To Website](https://olxpeople.thenoobsbook.dev)
+
 ## Screenshots
 
 ![Home Screen Destop](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/home_screen_desktop.png)<br/>
@@ -19,7 +23,3 @@ This project is an assignment created for displaying the continents and their de
 ![Details Expanded Mobile](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/details_screen_expanded_mobile.png)<br/>
 ![Details Collapsed Destop](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/details_screen_collapsed_desktop.png)<br/>
 ![Details Expanded Destop](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/details_screen_expanded_desktop.png)<br/>
-
-## Live Deployment
-
-[Go To Website](https://olxpeople.thenoobsbook.dev)
