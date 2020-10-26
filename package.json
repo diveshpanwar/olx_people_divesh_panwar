@@ -2,6 +2,15 @@
   "name": "olx_people_divesh_panwar",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diveshpanwar/olx_people_divesh_panwar"
+  },
+  "author": {
+    "name": "Divesh Panwar",
+    "email": "divesh.panwar@gmail.com",
+    "url": "https://profile.thenoobsbook.dev"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
