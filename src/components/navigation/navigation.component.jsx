@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const NavigationStyles = makeStyles((theme) => ({
     root: {
@@ -17,6 +17,14 @@ const NavigationStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+    link: {
+        textDecoration: 'none',
+        color: 'inherit',
+        '&:hover': {
+            textDecoration: 'none',
+            color: 'inherit',
+        }
+    }
 }));
 
 function NavigationComponent(props) {
@@ -27,7 +35,7 @@ function NavigationComponent(props) {
                 <Typography variant="h6" className={classes.title}>
                     <img src="images/olx_people_logo.svg" alt="OLX LOGO"/>
                 </Typography>
-                <Button color="inherit" className="font-weight-bold">CONTINENTS</Button>
+                <Link  to='/' color="inherit" className={classes.link +" font-weight-bold"}>CONTINENTS</Link >
             </Toolbar>
         </AppBar>
     );

@@ -6,6 +6,7 @@ function LoaderComponent(props) {
         <div className="row">
             <div className="col-6 text-center ml-auto mr-auto" style={{ marginTop: '20%' }}>
                 <CircularProgress style={{ color: '#333'}} />
+    <h6 className="text-center">{props.text}</h6>
             </div>
         </div>
     );
