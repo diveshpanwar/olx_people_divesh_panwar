@@ -12,20 +12,20 @@ import { useHistory } from "react-router-dom";
 
 
 const ContinentsStyles = makeStyles({
-    title: {
-        color: '#000',
-        fontWeight: 'bolder',
-        fontFamily: 'Open Sans',
-        fontSize: '1.4rem',
-        letterSpacing: '0.3rem',
+    continentDivs: {
+        maxWidth: '32%important',
     },
     hr: {
         border: '1px solid #000',
         background: 'black',
         width: '75px'
     },
-    continentDivs: {
-        maxWidth: '32%important',
+    title: {
+        color: '#000',
+        fontWeight: 'bolder',
+        fontFamily: 'Open Sans',
+        fontSize: '1.4rem',
+        letterSpacing: '0.3rem',
     },
     viewButton: {
         color: 'white',
@@ -56,19 +56,19 @@ function ContinentsComponent() {
         const continentsArray = [];
         continents.forEach(continent => {
             continentsArray.push(
-                <div className="col-10 col-md-4 ml-auto mr-auto"  key={continent.code}>
-                    <Card className={"ml-auto mr-auto mt-1 mb-1"} elevation={4} style={{ margin: "5px" }}>
-                        <CardContent>
-                            <h6 className="text-center mt-2 font-weight-bold">
+                <div className="col-10 col-md-4 ml-auto mr-auto" key={continent.code}>
+                    <Card className={"ml-auto mr-auto mt-3 mb-3"} elevation={4} style={{ margin: "5px" }}>
+                        <CardContent style={{paddingBottom: "5px"}}>
+                            <h6 className="text-center mt-2 font-weight-bold" style={{ fontSize: '1.2rem', letterSpacing: '3px' }}>
                                 {continent.name.toUpperCase()}
                             </h6>
-                            <h6 className="text-center mt-2" style={{ fontSize: '0.8rem' }}>
+                            <h6 className="text-center mt-2" style={{ fontSize: '0.9rem' }}>
                                 CODE : {continent.code}
                             </h6>
                         </CardContent>
                         <CardActions className="text-center mb-3" style={{ display: 'block' }}>
                             <BootstrapToolTip title="View Details">
-                                <Fab className={classes.viewButton} size="small" onClick= {() => {goToDetails(continent.code)}}>
+                                <Fab className={classes.viewButton} size="small" onClick={() => { goToDetails(continent.code) }}>
                                     <VisibilityIcon />
                                 </Fab>
                             </BootstrapToolTip>
@@ -95,7 +95,7 @@ function ContinentsComponent() {
                         </div>
                         {renderContinents(data.continents)}
                     </div>
-                    <div style={{ height: "200px" }}></div>
+                    <div style={{ height: "150px" }}></div>
                 </div>
 
             );
@@ -122,7 +122,7 @@ function ContinentsComponent() {
 
     if (error) {
         return (
-            <ErrorComponent/>
+            <ErrorComponent />
         );
     }
 }

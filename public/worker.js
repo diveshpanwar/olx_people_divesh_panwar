@@ -32,7 +32,7 @@ this.addEventListener('fetch', event => {
 
 // Update a service worker
 this.addEventListener('activate', event => {
-  var cacheWhitelist = ['pwa-task-manager'];
+  var cacheWhitelist = ['olx-people-assignments'];
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
@@ -40,6 +40,7 @@ this.addEventListener('activate', event => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
+          return true;
         })
       );
     })

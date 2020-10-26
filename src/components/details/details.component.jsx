@@ -13,23 +13,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
 
 const DetailStyles = makeStyles({
-    title: {
-        color: '#000',
-        fontWeight: 'bolder',
-        fontFamily: 'Open Sans',
-        fontSize: '1.4rem',
-        letterSpacing: '0.3rem',
-    },
-    hr: {
-        border: '1px solid #000',
-        background: 'black',
-        width: '75px'
-    },
-    heading: {
-        fontSize: 'rem',
-        fontWeight: 'bold',
-        fontFamily: 'Open Sans'
-    },
     capital: {
         position: 'absolute',
         right: '10%',
@@ -41,7 +24,24 @@ const DetailStyles = makeStyles({
         margin: '3px',
         fontWeight: 'bold',
         fontStyle: 'italic'
-    }
+    },
+    heading: {
+        fontSize: 'rem',
+        fontWeight: 'bold',
+        fontFamily: 'Open Sans'
+    },
+    hr: {
+        border: '1px solid #000',
+        background: 'black',
+        width: '75px'
+    },
+    title: {
+        color: '#000',
+        fontWeight: 'bolder',
+        fontFamily: 'Open Sans',
+        fontSize: '1.4rem',
+        letterSpacing: '0.3rem',
+    },
 });
 
 function DetailsComponent(props) {
@@ -134,7 +134,7 @@ function DetailsComponent(props) {
                     <Chip size="medium" label=
                         {
                             state.name
-                        } key={state.name} variant="outlined" className={classes.chip} />
+                        } key={state.name + Math.floor(Math.random() * 100).toString()} variant="outlined" className={classes.chip} />
                 );
             })
         }
@@ -151,7 +151,7 @@ function DetailsComponent(props) {
                     <Chip size="medium" label=
                         {
                             language.name
-                        } key={language.name} variant="outlined" className={classes.chip} />
+                        } key={language.name + Math.floor(Math.random() * 100).toString()} variant="outlined" className={classes.chip} />
                 );
             })
         }

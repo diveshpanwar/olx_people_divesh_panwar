@@ -8,6 +8,7 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Assignment for Interview Stage 2" />
   <meta name="author" content="Divesh Panwar">
+  <meta http-equiv="cache-control" content="no-cache"/>
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -44,7 +45,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('worker.js').then(function (registration) {
+        navigator.serviceWorker.register('/worker.js').then(function (registration) {
           console.log('Worker registration successful', registration.scope);
         }, function (err) {
           console.log('Worker registration failed', err);
