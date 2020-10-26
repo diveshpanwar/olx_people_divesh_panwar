@@ -56,7 +56,7 @@ function ContinentsComponent() {
         const continentsArray = [];
         continents.forEach(continent => {
             continentsArray.push(
-                <div className="col-10 col-md-4"  key={continent.code}>
+                <div className="col-10 col-md-4 ml-auto mr-auto"  key={continent.code}>
                     <Card className={"ml-auto mr-auto mt-1 mb-1"} elevation={4} style={{ margin: "5px" }}>
                         <CardContent>
                             <h6 className="text-center mt-2 font-weight-bold">
