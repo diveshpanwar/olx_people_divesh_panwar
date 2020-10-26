@@ -29,6 +29,10 @@ const NavigationStyles = makeStyles((theme) => ({
     },
 }));
 
+/**
+ * Navigation Component
+ * @param {*} props 
+ */
 function NavigationComponent(props) {
     const classes = NavigationStyles(props);
     return (

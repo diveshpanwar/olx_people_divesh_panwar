@@ -11,7 +11,10 @@ const useStylesBootstrap = makeStyles((theme) => ({
   },
 }));
 
-
+/**
+ * Display Bootstrap Based Tooltip
+ * @param {*} props 
+ */
 function BootstrapTooltip(props) {
   const classes = useStylesBootstrap();
 

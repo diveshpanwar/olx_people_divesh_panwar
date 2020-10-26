@@ -44,15 +44,14 @@ const DetailStyles = makeStyles({
     },
 });
 
+/**
+ * Details Component: To render the component details
+ * @param {*} props 
+ */
 function DetailsComponent(props) {
     const classes = DetailStyles();
     const [expanded, setExpanded] = React.useState(false);
     const code = props.match.params.continent;
-
-
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-    };
 
     const { loading, error, data } = useQuery(gql`
     {
@@ -70,6 +69,18 @@ function DetailsComponent(props) {
       }
     `);
 
+    /**
+     * Toggle the Accordions
+     * @param {*} panel 
+     */
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
+
+    /**
+     * Render the country Acordions
+     * @param {*} countries 
+     */
     const renderCountries = (countries) => {
         const countriesArray = [];
         countries.forEach(country => {
@@ -125,6 +136,10 @@ function DetailsComponent(props) {
         return countriesArray;
     }
 
+    /**
+     * Render State Chips of a country
+     * @param {*} country 
+     */
     const renderStates = (country) => {
         const statesArray = [];
 
@@ -141,7 +156,10 @@ function DetailsComponent(props) {
         return statesArray;
     }
 
-
+    /**
+     * Render Language Chips of a country
+     * @param {*} country 
+     */
     const renderLanguages = (country) => {
         const languagesArray = [];
 
@@ -157,6 +175,7 @@ function DetailsComponent(props) {
         }
         return languagesArray;
     }
+    // If Data is received
     if (data) {
         if (data.continent) {
             return (
@@ -186,11 +205,11 @@ function DetailsComponent(props) {
             );
         }
     }
-
+    // If the content si still loading
     if (loading) {
         return <LoaderComponent text="LOADING DETAILS" />
     }
-
+    // If an error occured
     if (error) {
         return (
             <ErrorComponent />

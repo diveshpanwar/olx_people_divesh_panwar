@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Error Component if Network Error Occurs while fetching data
+ */
 function ErrorComponent () {
     return (
         <div className="row">

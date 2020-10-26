@@ -51,6 +51,10 @@ const FooterStyles = makeStyles({
     },
 });
 
+/**
+ * Footer Component
+ * @param {*} props 
+ */
 function FooterComponent(props) {
     const classes = FooterStyles(props);
     return (

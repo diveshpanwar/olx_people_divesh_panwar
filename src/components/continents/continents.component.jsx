@@ -43,22 +43,33 @@ query {
 }
 `;
 
+/**
+ * Continents Component to render the Continents
+ */
 function ContinentsComponent() {
     const history = useHistory();
     const { loading, error, data } = useQuery(GetContinents);
     const classes = ContinentsStyles();
 
+    /**
+     * Open details component for a continent
+     * @param {*} code 
+     */
     const goToDetails = (code) => {
         history.push(`/continent/${code}`);
     }
 
+    /**
+     * Render continents
+     * @param {*} continents 
+     */
     const renderContinents = (continents) => {
         const continentsArray = [];
         continents.forEach(continent => {
             continentsArray.push(
                 <div className="col-10 col-md-4 ml-auto mr-auto" key={continent.code}>
                     <Card className={"ml-auto mr-auto mt-3 mb-3"} elevation={4} style={{ margin: "5px" }}>
-                        <CardContent style={{paddingBottom: "5px"}}>
+                        <CardContent style={{ paddingBottom: "5px" }}>
                             <h6 className="text-center mt-2 font-weight-bold" style={{ fontSize: '1.2rem', letterSpacing: '3px' }}>
                                 {continent.name.toUpperCase()}
                             </h6>
@@ -81,7 +92,7 @@ function ContinentsComponent() {
         return continentsArray;
     }
 
-
+    // if Data is received
     if (data) {
         if (data.continents && data.continents.length > 0) {
             return (
@@ -116,10 +127,12 @@ function ContinentsComponent() {
         }
     }
 
+    // if data is still loading
     if (loading) {
         return <LoaderComponent text="LOADING CONTINENTS" />
     }
 
+    // If an error occured
     if (error) {
         return (
             <ErrorComponent />

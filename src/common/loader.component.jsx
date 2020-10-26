@@ -1,6 +1,11 @@
 import React from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
+
+/**
+ * Loader to indicatie processing
+ * @param {*} props 
+ */
 function LoaderComponent(props) {
     return (
         <div className="row">
