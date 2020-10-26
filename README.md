@@ -14,7 +14,7 @@ This project is an assignment created for displaying the continents and their de
 
 ## PWA
 
-- Supports 13/14
+- PWA Compliant
 - Installable
 
 ## Live Deployment
