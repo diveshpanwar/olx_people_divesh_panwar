@@ -33,7 +33,7 @@ function NavigationComponent(props) {
         <AppBar position="static" className={classes.root}>
             <Toolbar>
                 <Typography variant="h6" className={classes.title}>
-                    <img src="images/olx_people_logo.svg" alt="OLX LOGO"/>
+                    <img src="/images/olx_people_logo.svg" alt="OLX LOGO"/>
                 </Typography>
                 <Link  to='/' color="inherit" className={classes.link +" font-weight-bold"}>CONTINENTS</Link >
             </Toolbar>

@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LoaderComponent from '../common/loader.component';
 const NavigationComponent = lazy(() => import('../components/navigation/navigation.component'));
 const ContinentsComponent = lazy(() => import('../components/continents/continents.component'));
+const DetailsComponent = lazy(() => import('../components/details/details.component'));
+
 const history = createBrowserHistory();
 
 export default (
@@ -14,6 +16,7 @@ export default (
             <div style={{ width: '100%' }}>
                 <Route path="/" component={NavigationComponent} />
                 <Route exact path="/" component={ContinentsComponent} />
+                <Route path="/continent/:continent" component={DetailsComponent}/>
             </div>
         </Suspense>
     </Router>

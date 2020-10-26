@@ -1,12 +1,15 @@
-import { Fab, makeStyles } from '@material-ui/core';
 import React from 'react';
+import { Fab, makeStyles } from '@material-ui/core';
 import LoaderComponent from '../../common/loader.component';
+import ErrorComponent from '../../common/error.common';
 import { useQuery, gql } from '@apollo/client';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import VisibilityIcon from '@material-ui/icons//Visibility';
 import BootstrapToolTip from '../../common/bootstraptooltip.common';
+import { useHistory } from "react-router-dom";
+
 
 const ContinentsStyles = makeStyles({
     title: {
@@ -26,7 +29,8 @@ const ContinentsStyles = makeStyles({
     },
     viewButton: {
         color: 'white',
-        backgroundColor: '#000'
+        backgroundColor: '#000',
+        outline: 'none!important',
     }
 });
 
@@ -40,14 +44,17 @@ query {
 `;
 
 function ContinentsComponent() {
+    const history = useHistory();
     const { loading, error, data } = useQuery(GetContinents);
-
     const classes = ContinentsStyles();
+
+    const goToDetails = (code) => {
+        history.push(`/continent/${code}`);
+    }
 
     const renderContinents = (continents) => {
         const continentsArray = [];
         continents.forEach(continent => {
-            console.log(continent);
             continentsArray.push(
                 <div className="col-10 col-md-4"  key={continent.code}>
                     <Card className={"ml-auto mr-auto mt-1 mb-1"} elevation={4} style={{ margin: "5px" }}>
@@ -61,7 +68,7 @@ function ContinentsComponent() {
                         </CardContent>
                         <CardActions className="text-center mb-3" style={{ display: 'block' }}>
                             <BootstrapToolTip title="View Details">
-                                <Fab className={classes.viewButton} size="small">
+                                <Fab className={classes.viewButton} size="small" onClick= {() => {goToDetails(continent.code)}}>
                                     <VisibilityIcon />
                                 </Fab>
                             </BootstrapToolTip>
@@ -76,7 +83,6 @@ function ContinentsComponent() {
 
 
     if (data) {
-        console.log(data.continents);
         if (data.continents && data.continents.length > 0) {
             return (
                 <div>
@@ -116,13 +122,7 @@ function ContinentsComponent() {
 
     if (error) {
         return (
-            <div className="row">
-                <div className="col-12 text-center mt-3">
-                    <h5 className="text-center mt-3">
-                        SOMETHING WENT WRONG. PLEASE TRY AGAIN AFTER SOMETIME.
-                    </h5>
-                </div>
-            </div>
+            <ErrorComponent/>
         );
     }
 }

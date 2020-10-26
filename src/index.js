@@ -15,33 +15,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-// client.query({
-//   query: gql`
-//   {
-//     continent(code: "AF") {
-//       name,
-//       countries {
-//         capital
-//         name
-//         languages{name}
-//         states {
-//           name
-//         }
-//       }
-//     }
-//   }
-//   `
-// }).then(res => {
-//   console.log(res);
-// });
 
 ReactDOM.render(
-  <React.StrictMode>
     <ApolloProvider  client={client}>
       <App />
-    </ApolloProvider>
-
-  </React.StrictMode>,
+    </ApolloProvider>,
   document.getElementById('root')
 );
 
