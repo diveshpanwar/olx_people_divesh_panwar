@@ -1,4 +1,4 @@
-var CACHE_NAME = 'pwa-task-manager';
+var CACHE_NAME = 'olx-people-assignment';
 var urlsToCache = [
   '/',
 ];
