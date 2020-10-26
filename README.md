@@ -19,7 +19,8 @@ This project is an assignment created for displaying the continents and their de
 
 ## Live Deployment
 
-[Go To Website](https://olxpeople.thenoobsbook.dev)
+[Go To Website](https://olxpeople.thenoobsbook.dev), deployed on private hosting
+[Go To Website](https://olx-people-assignment.web.app), deployed on firebase
 
 ## Screenshots
 
