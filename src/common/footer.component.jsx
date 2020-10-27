@@ -1,11 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { makeStyles } from '@material-ui/core';
 
 const FooterStyles = makeStyles({
     root: {

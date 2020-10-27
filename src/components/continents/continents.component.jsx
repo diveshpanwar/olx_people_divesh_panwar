@@ -1,15 +1,14 @@
 import React from 'react';
-import { Fab, makeStyles } from '@material-ui/core';
 import LoaderComponent from '../../common/loader.component';
 import ErrorComponent from '../../common/error.common';
-import { useQuery, gql } from '@apollo/client';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import VisibilityIcon from '@material-ui/icons//Visibility';
 import BootstrapToolTip from '../../common/bootstraptooltip.common';
 import { useHistory } from "react-router-dom";
-
+import { Fab, makeStyles } from '@material-ui/core';
+import { useQuery, gql } from '@apollo/client';
 
 const ContinentsStyles = makeStyles({
     continentDivs: {

@@ -1,8 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
 import LoaderComponent from '../../common/loader.component';
 import ErrorComponent from '../../common/error.common';
-import { useQuery, gql } from '@apollo/client';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Accordion from '@material-ui/core/Accordion';
@@ -11,6 +9,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
+import { makeStyles } from '@material-ui/core';
+import { useQuery, gql } from '@apollo/client';
 
 const DetailStyles = makeStyles({
     capital: {
@@ -205,7 +205,7 @@ function DetailsComponent(props) {
             );
         }
     }
-    // If the content si still loading
+    // If the content is still loading
     if (loading) {
         return <LoaderComponent text="LOADING DETAILS" />
     }
