@@ -67,13 +67,13 @@ function FooterComponent(props) {
                     {String.fromCodePoint('0x1F496')} CREATED WITH LOVE {String.fromCodePoint('0x1F496')}
                 </Typography>
                 <Typography className={classes.typo3}>
-                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/divesh-panwar-44272685/"><LinkedInIcon /></a>
+                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/divesh-panwar-44272685/" alt="LinkedIn"><LinkedInIcon /></a>
                     &nbsp;
-                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://github.com/diveshpanwar"><GitHubIcon /></a>
+                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://github.com/diveshpanwar" alt="Github"><GitHubIcon /></a>
                     &nbsp;
-                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ahamMrityuAsmi/"><InstagramIcon /></a>
+                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ahamMrityuAsmi/" alt="Facebook"><InstagramIcon /></a>
                     &nbsp;
-                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aham_mrityu_asmi/"><FacebookIcon /></a>
+                    <a className={classes.a} target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aham_mrityu_asmi/" alt="Instagram"><FacebookIcon /></a>
                 </Typography>
             </Paper>
         </div>
