@@ -24,7 +24,7 @@ This project is an assignment created for displaying the continents and their de
 
 ## Screenshots
 
-![LightHouse](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/performance.png)<br/>
+![LightHouse](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/performance_new.png)<br/>
 ![Home Screen Destop](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/home_screen_desktop.png)<br/>
 ![Home Screen Mobile](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/home_screen_mobile.png)<br/>
 ![Details Expanded Mobile](https://raw.githubusercontent.com/diveshpanwar/d3-graph-data/master/details_screen_expanded_mobile.png)<br/>
